@@ -21,8 +21,7 @@ Primitive datatypes
     • String
     
     • Symbol (New in ES6)
-    
-     
+        
 # 1. Null
 
 
@@ -248,7 +247,6 @@ const list = {
     }
     
 };
-
 
 # 5. Tree
 

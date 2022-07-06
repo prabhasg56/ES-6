@@ -25,14 +25,12 @@ Primitive datatypes
 # 1. Null
 
 
-
    The null in JavaScript is a data type that is represented by only one value, JavaScript null is a primitive type that contains a special value null, the ‘null’ itself. A null value means no value.
 
 Syntax : null
 
-var a = null;
-
-console.log(a);   // This returns null
+      var a = null;
+      console.log(a);   // This returns null
 
 # 2. Boolean
 
@@ -43,11 +41,11 @@ Syntax : var val = new Boolean(value);
 
 Example :
 
-var a = 2, b = 5, c = 10;
+    var a = 2, b = 5, c = 10;
 
-alert(b > a) // true
+    alert(b > a) // true
 
-alert(b > c) // false
+    alert(b > c) // false
 
 # 3. Undefined
 
@@ -59,9 +57,9 @@ Syntax : undefined
 
 Example :
 
-var a;
+     var a;
 
-alert(a);
+     alert(a);
 
 In the above example, we have not assigned any value to a variable named 'a'. So it is undefined.
 
@@ -87,24 +85,19 @@ Syntax : BigInt(number)
 
 Example :
 
-let bigInt = 9007199254740991n;
+     let bigInt = 9007199254740991n;
 
-var bigNum = BigInt(
+     var bigNum = BigInt("123422226666555557777777");
 
-"123422226666555557777777");
+     console.log(bigNum);
 
-console.log(bigNum);
+     var bigHex = BigInt("0x1ffffffeeeeeeeeef");
 
+     console.log(bigHex);
 
-var bigHex = BigInt("0x1ffffffeeeeeeeeef");
+     var bigBin = BigInt("0b10101010010101010011111111");
 
-console.log(bigHex);
-
-var bigBin = BigInt(
-
-"0b10101010010101010011111111");
-
-console.log(bigBin);
+     console.log(bigBin);
 
 # 6. String
 
@@ -116,11 +109,11 @@ Syntax : keyword string_name
 
 Example :
 
-let greeting = 'Hi';
+    let greeting = 'Hi';
 
-let message  = "Bye";
+    let message  = "Bye";
 
-let msg = 'I\'m also a valid string'; // use \ to escape the single quote (')
+    let msg = 'I\'m also a valid string'; // use \ to escape the single quote (')
 
 # 7. Symbol
 
@@ -133,7 +126,7 @@ Example :
 
       let s1 = Symbol();
       
-    console.log(Symbol() == Symbol()); // false
+      console.log(Symbol() == Symbol()); // false
     
 
 # Data Structure in ES6
@@ -165,13 +158,13 @@ Arrays are the most basic data structure. It is a group of similar types of elem
 
 Example :
 
-var arr=["prabhas","sumit","deepak"];
+     var arr=["prabhas","sumit","deepak"];
 
-for (i=0;i<arr.length;i++){  
+     for (i=0;i<arr.length;i++){  
 
-document.write(arr[i] + ", ");  //[prabhas sumit deepak]
+     document.write(arr[i] + ", ");  //[prabhas sumit deepak]
 
-}
+     }
 
 # 2. Stack
 
@@ -180,15 +173,15 @@ Stack is a linear data structure that follows the LIFO(Last In First Out) or FIL
 
 Example :
 
-class Stack {
+     class Stack {
 
-constructor()
+     constructor()
 
-{
+     {
 
-    this.items = [];
+         this.items = [];
     
-}
+      }
 
 In above definition we have created a skeleton of a stack class which contains a constructor in which we declare an array to implement stack.
 
@@ -216,9 +209,9 @@ The linked list is a linear data structure in which elements are not in contiguo
 
 Example :
 
-const list = {
+    const list = {
 
-    head: {
+      head: {
     
         value: 6
         
@@ -271,15 +264,15 @@ There are a number of different types of trees:-
 
 Example :
 
-class Tree {
+    class Tree {
 
-constructor(data) {
+    constructor(data) {
 
-  let node = new Node(data);
+    let node = new Node(data);
   
-  this._root = node;
+     this._root = node;
   
-}
+   }
 Tree contains two lines of code. The first line creates a new instance of Node; the second line assigns node as the root of a tree.
 
 # 6. Graph
@@ -292,19 +285,19 @@ There are two common types of graphs:-
     
 Example :
 
-class Graph {
+    class Graph {
 
-    constructor(noOfVertices)
+        constructor(noOfVertices)
     
-    {
+        {
     
-        this.noOfVertices= noOfVertices;
+            this.noOfVertices= noOfVertices;
+           
+            this.AdjList = new Map();
         
-        this.AdjList = new Map();
+         }
         
-        }
-        
-    }
+      }
     
 # 7. Hash table
 
@@ -329,9 +322,9 @@ Example :
     
     return key.toString().length % this.size;
     
-    }
+     }
     
-}
+  }
 The constructor contains an object in which we’re going to store the values, the length of the values, and the entire size of the hash table. This function takes the provided key and returns a hash that’s calculated using an arithmetic modulus.
 
 # 8. Map
@@ -341,28 +334,28 @@ Maps are collections of keys and values of any type, in simple word Map is a col
 
 Example :
 
-const map1 = new Map();
+    const map1 = new Map();
 
-map1.set('a', 1);
+    map1.set('a', 1);
 
-map1.set('b', 2);
+    map1.set('b', 2);
 
-map1.set('c', 3);
+    map1.set('c', 3);
 
-console.log(map1.get('a'));
-// expected output: 1
+    console.log(map1.get('a'));
+    // expected output: 1
 
-map1.set('a', 97);
+    map1.set('a', 97);
 
-console.log(map1.get('a'));
-// expected output: 97
+    console.log(map1.get('a'));
+    // expected output: 97
 
-console.log(map1.size);
-// expected output: 3
+    console.log(map1.size);
+    // expected output: 3
 
-map1.delete('b');
+    map1.delete('b');
 
-console.log(map1.size);//2
+    console.log(map1.size);//2
 
 # 9. Set
 
@@ -371,23 +364,23 @@ It is a data structure introduced in ES6 version. A Set is a collection of value
 
 Example :
 
-const mySet1 = new Set()
+    const mySet1 = new Set()
 
-mySet1.add(1) 
+    mySet1.add(1) 
 
-mySet1.add(5) 
+    mySet1.add(5) 
 
-mySet1.add(5) 
+    mySet1.add(5) 
 
-mySet1.add('hello')
+    mySet1.add('hello')
 
-const o = {a: 1, b: 2}
+    const o = {a: 1, b: 2}
 
-mySet1.add(o)
+    mySet1.add(o)
 
-mySet1.add({a: 1, b: 2}) 
+    mySet1.add({a: 1, b: 2}) 
 
-console.log(mySet)
+    console.log(mySet)
 
 # References :
 

@@ -8,19 +8,23 @@ ES6 is also known as ECMAScript 2015. It is a standardised scripting language fo
 
 Primitive datatypes
 
-    • Null
+    • Null Data Type
     
-    • Boolean
+    • Boolean Data Type
     
-    • Undefined
+    • Undefined Data Type
     
-    • Number
+    • Number Data Type
     
-    • BigInt
+    • BigInt Data Type
     
-    • String
+    • String Data Type
     
-    • Symbol (New in ES6)
+    • Symbol (New in ES6) Data Type
+    
+    * Object Data Type
+    
+    * Function Data Type
         
 # 1. Null
 
@@ -57,9 +61,11 @@ Syntax : undefined
 
 Example :
 
-     var a;
-
-     alert(a);
+         var a;
+         var b = "Hello World!"
+         
+         alert(a) // Output: undefined
+         alert(b) // Output: Hello World!
 
 In the above example, we have not assigned any value to a variable named 'a'. So it is undefined.
 
@@ -127,6 +133,36 @@ Example :
       let s1 = Symbol();
       
       console.log(Symbol() == Symbol()); // false
+      
+# 8. Object Data Type
+
+    An object contains properties, defined as a key-value pair. A property key (name) is always a string, but the value can be 
+    any data type, like strings, numbers, booleans, or complex data types like arrays, function and other objects.
+     
+     Example:
+            var emptyObject = {};
+            var person = {"name": "Sachin", "surname": "Kumar", "age": "24"};
+ 
+            var car = {
+                 "modal": "BMW",
+                 "color": "white",
+                 "doors": 4
+            }
+
+         
+# 9. Function Data Type
+        
+     The function is callable object that executes a block of code. Since functions are objects,
+     so it is possible to assign them to variables, as shown in the example below:   
+        
+            var greeting = function(){ 
+            return "Hello World!"; 
+            }
+ 
+            // Check the type of greeting variable
+            alert(typeof greeting) // Output: function
+            alert(greeting());     // Output: Hello World!
+
     
 
 # Data Structure in ES6

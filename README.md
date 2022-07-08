@@ -22,6 +22,10 @@ Primitive datatypes
     
     • Symbol (New in ES6) Data Type
     
+    * Proxy Object Data Type
+    
+    * Reflect Object Data Type
+    
     * Object Data Type
     
     * Function Data Type
@@ -134,7 +138,49 @@ Example :
       
       console.log(Symbol() == Symbol()); // false
       
-# 8. Object Data Type
+# 8. Proxy Object Data Type
+
+    The Proxy object enables you to create a proxy for another object, which can intercept and redefine 
+    fundamental operations for that object.
+    
+    Syntax:
+        
+    let proxy = new Proxy(target, handler);
+        
+    target: the original object which you want to proxy
+    handler: an object that defines which operations will be intercepted
+             and how to redefine intercepted operations.
+                 
+                        const target = {
+                              message1: "hello",
+                              message2: "everyone"
+                        };
+                    
+                        const handler1 = {};
+
+                        const proxy1 = new Proxy(target, handler1);
+                        console.log(proxy1.message1); // hello
+                        console.log(proxy1.message2); // everyone
+
+# 9. Reflect Object Data Type
+
+     ES6 introduces a new global object called Reflect that allows you to call methods, construct objects,
+     get and set properties, and manipulate and extend properties.
+     
+     Example:
+        
+                const duck = {
+                    name: 'Maurice',
+                    color: 'white',
+                    greeting: function() {
+                    console.log(`Quaaaack! My name is ${this.name}`);
+                    }
+                }
+
+                Reflect.has(duck, 'color');// true
+                Reflect.has(duck, 'haircut');// false
+      
+# 10. Object Data Type
 
     An object contains properties, defined as a key-value pair. A property key (name) is always a string, but the value can be 
     any data type, like strings, numbers, booleans, or complex data types like arrays, function and other objects.
@@ -150,7 +196,7 @@ Example :
             }
 
          
-# 9. Function Data Type
+# 11. Function Data Type
         
      The function is callable object that executes a block of code. Since functions are objects,
      so it is possible to assign them to variables, as shown in the example below:   
@@ -420,6 +466,8 @@ Example :
 
 # References :
 
+
+* https://www.modernjs.com/data-types.html
 
 * https://www.geeksforgeeks.org/es6-collection/
 
